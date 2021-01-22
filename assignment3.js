@@ -1,7 +1,7 @@
 
+// https://github.com/Erfana07/assignment3
 
-
-kilometerToMeter
+// kilometerToMeter
 
 function kilometerToMeter(kilometer) {
     var meter = kilometer * 1000;
@@ -13,7 +13,7 @@ var result = kilometerToMeter(23);
 
 
 
-budgetCalculator
+// budgetCalculator
 
 function budgetCalculator(watch,phone,laptop) {
     watch = watch * 50;
@@ -27,7 +27,7 @@ var total = budgetCalculator(3, 2, 1);
 
 
 
-hotelCost
+// hotelCost
 
 function hotelCost(day) {
     var cost = 0;
@@ -54,7 +54,7 @@ var totalCost = hotelCost(17);
 
 
 
-megaFriend
+// megaFriend
 
 function megaFriend(arr) {
     var lgth = 0;
