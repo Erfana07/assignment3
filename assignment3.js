@@ -1,71 +1,87 @@
 
 // https://github.com/Erfana07/assignment3
 
-// kilometerToMeter
+//Convert kilometer To Meter
 
 function kilometerToMeter(kilometer) {
-    var meter = kilometer * 1000;
+    if (kilometer >= 0) {
+        var meter = kilometer * 1000;
+    }
+    else {
+        meter = "Invalid input";
+    }
     return meter;
 }
-var result = kilometerToMeter(23);
+var result = kilometerToMeter(9);
 
 
 
 
-
-// budgetCalculator
+//budgetCalculator
 
 function budgetCalculator(watch,phone,laptop) {
-    watch = watch * 50;
-    phone = phone * 100;
-    laptop = laptop * 500;
-    return watch + phone + laptop;
+    if (watch >= 0 && phone >= 0 && laptop >= 0) {
+        watch = watch * 50;
+        phone = phone * 100;
+        laptop = laptop * 500;
+        return watch + phone + laptop;
+    } else {
+        return "Invalid input";
+    }
 }
-var total = budgetCalculator(3, 2, 1);
+var total = budgetCalculator(2,1,3);
 
 
 
 
-
-// hotelCost
+//hotelCost
 
 function hotelCost(day) {
     var cost = 0;
-    if (day <= 10) {
+    if (day<=0) {
+        return "Invalid Days";
+    }
+    else if (day <= 10) {
         cost = day * 100;
     }
     else if (day <= 20) {
-        var firstPart = 10 * 100;
+        var first10Days = 10 * 100;
         var remainingDays = day - 10;
-        var secondPart = remainingDays * 80;
-        cost = firstPart + secondPart;
+        var second10Days = remainingDays * 80;
+        cost = first10Days + second10Days;
     }
     else {
-        var firstPart = 10 * 100;
-        var secondPart = 10 * 80;
+        var first10Days = 10 * 100;
+        var second10Days = 10 * 80;
         var remainingDays = day - 20;
-        var thirdPard = remainingDays * 50;
-        cost = firstPart + secondPart + thirdPard;
+        var moreThan20Days = remainingDays * 50;
+        cost = first10Days + second10Days + moreThan20Days;
     }
     return cost;
 }
-var totalCost = hotelCost(17);
+var totalCost = hotelCost(23);
 
 
 
 
-// megaFriend
+//megaFriend
 
-function megaFriend(arr) {
-    var lgth = 0;
-    var friendsName;
+function megaFriend(names) {
+    var length = 0;
+    var longestName;
 
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i].length > lgth) {
-            var lgth = arr[i].length;
-            friendsName = arr[i];
+    for (var i = 0; i < names.length; i++) {
+        if (names[i].length > length) {
+            var length = names[i].length;
+            longestName = names[i];
         }
     }
-    return friendsName;
+    return longestName;
 }
-var friendsName = megaFriend(["Russel","Kamal","Solimuddin","Dany",]);
+var longestName = megaFriend([
+    "Russel",
+    "Jonny",
+    "Zubayer",
+    "Abdul",
+    "Rahim",
+]);
